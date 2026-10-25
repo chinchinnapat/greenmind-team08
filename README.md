@@ -14,7 +14,7 @@
 - **Engine:** vLLM 0.32.0, FlashInfer, prefix caching (hit rate 19–51%)
 - **Scheduler:** `--max-num-batched-tokens 4096 --max-num-seqs 256 --long-prefill-token-threshold 2048 --async-scheduling`
 - **GPU:** power limit 400 W (ค่าเริ่มต้นของ GPU), เปิด persistence mode
-- **Weight บน Hugging Face:** รอใส่ลิงก์
+- **Weight บน Hugging Face:** https://huggingface.co/chinnakrub/MANGO1.5-Qwen3.5-9B-W8A8-GDN-team08
 
 ชุดก่อนหน้า **v1** (สูงสุด 93.9): โมเดล INT8 ที่ linear attention ยังเป็น BF16 ([`quant/quant_w8a8.py`](quant/quant_w8a8.py)), 367 W, ไม่มี async scheduling
 

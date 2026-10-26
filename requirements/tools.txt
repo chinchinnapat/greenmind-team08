@@ -1,0 +1,5 @@
+# tools/loadtest.py (runs on the GPU host) and sim/mc_real.py (runs anywhere)
+openai
+httpx
+nvidia-ml-py
+numpy

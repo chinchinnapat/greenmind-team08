@@ -1,0 +1,5 @@
+# Serving environment (~/venv). FlashInfer JIT also needs the CUDA 12.9 toolkit (nvcc) on the host.
+vllm==0.32.0
+huggingface_hub[cli]
+ninja
+flashinfer-cubin

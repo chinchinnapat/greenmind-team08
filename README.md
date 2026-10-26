@@ -32,11 +32,11 @@ Best Final run (F18), measured by the organizers' grader on a hidden 300-request
 ## What worked
 
 ```mermaid
-flowchart LR
-    A["MANGO 9B<br/>BF16, official"] -->|"GPTQ W8A8<br/>open calibration data"| B["INT8 checkpoint<br/>(this repo, v2)"]
-    B --> C["vLLM 0.32<br/>chunked prefill 4096 / 2048<br/>prefix caching · async scheduling"]
-    C --> D["OpenAI-compatible endpoint<br/>streaming · tool calls"]
-    D --> E["Grader<br/>300-request trace<br/>NVML energy"]
+flowchart TD
+    A["MANGO 9B, BF16 official weights"] -- "GPTQ W8A8, open calibration data" --> B["INT8 checkpoint, v2"]
+    B --> C["vLLM 0.32: chunked prefill 4096/2048, prefix caching, async scheduling"]
+    C --> D["OpenAI-compatible endpoint: streaming, tool calls"]
+    D --> E["Grader: 300-request trace, NVML energy"]
 ```
 
 ### 1. Diagnose the bottleneck, then quantize to INT8 (27.8 → 77.6)
